@@ -1,0 +1,17 @@
+tag,limit_type,limit_value,severity,valid_from,note
+UPW1.POU.TOC,max,1.0,spec,2024-01-01,Customer specification (demo value)
+UPW1.POU.TOC,max,0.8,alert,2024-01-01,Internal alert level
+UPW1.POU.RES,min,18.0,spec,2024-01-01,Customer specification (demo value)
+UPW1.POU.RES,min,18.1,alert,2024-01-01,Internal alert level
+UPW1.POU.SIO2,max,0.5,spec,2024-01-01,Customer specification (demo value)
+UPW1.POU.SIO2,max,0.3,alert,2024-01-01,Internal alert level
+UPW1.POU.PART,max,200,spec,2024-01-01,Customer specification (demo value)
+UPW1.POU.DO,max,5,spec,2024-01-01,Customer specification (demo value)
+UPW1.POU.DO,max,3,alert,2024-01-01,Internal alert level
+UPW1.POU.TEMP,min,21,spec,2024-01-01,Customer specification (demo value)
+UPW1.POU.TEMP,max,23,spec,2024-01-01,Customer specification (demo value)
+UPW1.MB.RES,min,18.0,alert,2024-01-01,Plan resin exchange
+UPW1.MB.SIO2,max,0.3,alert,2024-01-01,Plan resin exchange
+UPW1.FF1.DP,max,1.0,alert,2024-01-01,Plan filter change
+UPW1.RO1.DP,max,2.2,alert,2024-01-01,Plan RO cleaning (CIP)
+UPW1.UV185.INTENSITY,min,75,alert,2024-01-01,Plan UV lamp change

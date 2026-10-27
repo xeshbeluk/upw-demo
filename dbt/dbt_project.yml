@@ -1,0 +1,51 @@
+name: upw
+version: "0.1.0"
+config-version: 2
+profile: upw
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  upw:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: table
+      +schema: intermediate
+    core:
+      +materialized: table
+      +schema: core
+    marts:
+      +materialized: table
+      +schema: marts
+    quality:
+      +materialized: table
+      +schema: quality
+
+vars:
+  plant_tz: "Europe/Zurich"
+
+seeds:
+  upw:
+    +schema: reference
+    +quote_columns: true
+    tags:
+      +column_types: {tag: varchar, unit_id: varchar, parameter: varchar, is_analyzer: boolean, bad_direction: varchar,
+                      trend_monitor: boolean, min_relevant_change: double, display_order: integer}
+    spec_limits:
+      +column_types: {tag: varchar, limit_type: varchar, limit_value: double, severity: varchar, valid_from: date}
+    event_types:
+      +column_types: {event_type: varchar, is_maintenance: boolean, masks_analyzers: boolean, mask_hours: double,
+                      window_before_h: double, window_after_h: double, default_tags: varchar}
+    event_keywords:
+      +column_types: {keyword: varchar, event_type: varchar}
+    unit_aliases:
+      +column_types: {alias: varchar, unit_id: varchar}
+    analyzer_keywords:
+      +column_types: {keyword: varchar, parameter: varchar}
+    process_units:
+      +column_types: {unit_id: varchar, sequence: integer}

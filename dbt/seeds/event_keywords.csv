@@ -1,0 +1,19 @@
+keyword,event_type
+Harzwechsel,resin_exchange
+resin exchange,resin_exchange
+resin change,resin_exchange
+Lampenwechsel,uv_lamp_change
+lamp change,uv_lamp_change
+Filter,filter_change
+CIP,ro_cip
+Wärmetauscher,hx_cleaning
+heat exchanger,hx_cleaning
+kalibr,analyzer_calibration
+calibrat,analyzer_calibration
+Fehler,analyzer_fault
+fault,analyzer_fault
+Studie,study
+study,study
+Rundgang,inspection
+Kontrolle,inspection
+Probenahme,inspection

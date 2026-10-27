@@ -1,0 +1,23 @@
+tag,unit_id,parameter,description,unit,is_analyzer,bad_direction,trend_monitor,min_relevant_change,display_order
+UPW1.FEED.COND,FEED,COND,Feed conductivity,µS/cm,false,up,false,50,10
+UPW1.FEED.TEMP,FEED,TEMP,Feed temperature,°C,false,both,false,2,11
+UPW1.FEED.TOC,FEED,TOC,Feed TOC,ppb,true,up,true,300,12
+UPW1.RO1.PERM_COND,RO1,COND,RO permeate conductivity,µS/cm,false,up,true,1,20
+UPW1.RO1.PERM_TOC,RO1,TOC,RO permeate TOC,ppb,true,up,true,5,21
+UPW1.RO1.DP,RO1,DP,RO differential pressure,bar,false,up,false,0.3,22
+UPW1.RO1.PERM_FLOW,RO1,FLOW,RO permeate flow,m3/h,false,down,false,5,23
+UPW1.EDI1.RES,EDI1,RES,EDI product resistivity,MOhm*cm,false,down,true,1,30
+UPW1.UV185.INTENSITY,UV185,INTENSITY,UV185 lamp intensity,%,false,down,false,5,40
+UPW1.DEGAS.DO,DEGAS,DO,Degasser outlet dissolved oxygen,ppb,true,up,true,1.5,50
+UPW1.MB.RES,MB,RES,Mixed-bed outlet resistivity,MOhm*cm,false,down,true,0.05,60
+UPW1.MB.SIO2,MB,SIO2,Mixed-bed outlet silica,ppb,true,up,true,0.05,61
+UPW1.FF1.DP,FF1,DP,Final filter differential pressure,bar,false,up,false,0.2,70
+UPW1.LOOP.FLOW,LOOP,FLOW,Loop return flow,m3/h,false,down,false,3,80
+UPW1.POU.RES,POU,RES,POU resistivity,MOhm*cm,false,down,true,0.05,90
+UPW1.POU.TOC,POU,TOC,POU TOC (analyser A),ppb,true,up,true,0.1,91
+UPW1.POU.TOC_B,POU,TOC,POU TOC (analyser B - study),ppb,true,up,false,0.1,92
+UPW1.POU.DO,POU,DO,POU dissolved oxygen,ppb,true,up,true,0.5,93
+UPW1.POU.SIO2,POU,SIO2,POU silica,ppb,true,up,true,0.05,94
+UPW1.POU.PART,POU,PART,POU particles > 0.05 µm,counts/L,true,up,true,30,95
+UPW1.POU.TEMP,POU,TEMP,POU temperature,°C,false,both,true,0.5,96
+UPW1.POU.PRESS,POU,PRESS,POU pressure,bar,false,down,false,0.3,97

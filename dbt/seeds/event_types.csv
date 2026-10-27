@@ -1,0 +1,10 @@
+event_type,label,is_maintenance,masks_analyzers,mask_hours,window_before_h,window_after_h,default_tags
+resin_exchange,Resin exchange (mixed bed),true,false,0,48,72,UPW1.MB.SIO2|UPW1.MB.RES|UPW1.POU.SIO2|UPW1.POU.RES
+uv_lamp_change,UV lamp change,true,false,0,72,72,UPW1.UV185.INTENSITY|UPW1.POU.TOC|UPW1.RO1.PERM_TOC
+filter_change,Filter change,true,false,0,6,24,UPW1.POU.PART|UPW1.FF1.DP|UPW1.POU.PRESS
+ro_cip,RO clean-in-place,true,false,0,24,24,UPW1.RO1.DP|UPW1.RO1.PERM_COND|UPW1.RO1.PERM_FLOW
+hx_cleaning,Heat exchanger work,true,false,0,24,24,UPW1.POU.TEMP|UPW1.FEED.TEMP
+analyzer_calibration,Analyser calibration,false,true,2,4,4,UPW1.POU.TOC|UPW1.RO1.PERM_TOC
+analyzer_fault,Analyser fault / repair,false,false,0,24,24,UPW1.POU.DO
+study,Study,false,false,0,24,168,UPW1.POU.TOC|UPW1.POU.TOC_B
+inspection,Inspection / sampling,false,false,0,2,2,UPW1.POU.TOC|UPW1.POU.RES

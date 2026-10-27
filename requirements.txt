@@ -1,0 +1,8 @@
+numpy
+pandas
+openpyxl
+duckdb
+dbt-duckdb
+shiny
+plotly
+matplotlib

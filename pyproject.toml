@@ -1,0 +1,15 @@
+[project]
+name = "upw-demo"
+version = "0.1.0"
+description = "UPW plant monitoring demo (fictional data)"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "numpy",
+    "pandas",
+    "openpyxl",
+    "duckdb",
+    "dbt-duckdb",
+    "shiny",
+    "plotly",
+    "matplotlib",
+]

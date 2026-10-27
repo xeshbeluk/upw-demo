@@ -1,0 +1,12 @@
+unit_id,unit_name,sequence,description
+FEED,Feed water,1,City / well water entering the plant
+RO1,Reverse osmosis 1,2,Removes ions and most organics
+EDI1,Electrodeionisation 1,3,Continuous ion polishing
+UV185,UV 185 nm,4,Oxidises remaining organics (TOC reduction)
+DEGAS,Degasser,5,Membrane degassing (dissolved oxygen)
+MB,Mixed-bed polisher,6,Ion-exchange polishing to 18.2 MOhm*cm
+FF1,Final filter 1,7,Particle filtration before the loop
+LOOP,Distribution loop,8,Recirculation to the fab
+POU,Point of use,9,Water quality delivered to the fab tools
+HX1,Heat exchanger 1,8,Loop temperature control
+PLANT,Whole plant,0,Entries not tied to one unit

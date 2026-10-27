@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: landing
+    schema: landing
+    tables:
+      - name: readings
+      - name: diary
+      - name: load_log

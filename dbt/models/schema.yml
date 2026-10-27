@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fct_reading
+    description: All process values from both export folders (5-min archive, 10-s maintenance exports), UTC, quality-flagged.
+    columns:
+      - name: tag
+        data_tests: [not_null]
+      - name: ts_utc
+        data_tests: [not_null]
+  - name: dim_event
+    description: Classified diary events with analysis windows.
+    columns:
+      - name: event_id
+        data_tests: [unique, not_null]
+  - name: mart_daily
+    description: Daily statistics per tag (local day), good values only.
+  - name: mart_trend
+    description: EWMA trend-deviation status per monitored tag and day, incl. days to spec limit.
+  - name: mart_spec_exceedances
+    description: Spec / alert limit exceedance episodes, maintenance-related ones marked.
+    columns:
+      - name: episode_id
+        data_tests: [unique, not_null]
+
+seeds:
+  - name: tags
+    description: Tag catalogue - unit, parameter, monitoring settings. Owned by process engineering.
+    columns:
+      - name: tag
+        data_tests: [unique, not_null]
+  - name: spec_limits
+    description: Spec and alert limits per tag with validity date. Owned by process engineering.
+  - name: event_keywords
+    description: Diary keywords -> event type.

@@ -1,0 +1,7 @@
+upw:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('WATER_DB', '../warehouse/upw.duckdb') }}"
+      threads: 4
