@@ -73,3 +73,37 @@ app/                           Shiny app
 
 Steps: public GitHub repo with these files → connect.posit.cloud → Publish → Shiny → repository →
 branch `main` → primary file `app.py` → Publish.
+
+---
+
+# Experiment logbook (second app)
+
+For long-term experiments (pilot skids, analyser tests): upload instrument exports copied from a USB stick,
+keep one long-term series per experiment, mark events, and export any period as PNG, PDF or Excel.
+
+```
+start_logbook.bat        (or: uv run shiny run logbook/app.py --port 8766 --launch-browser)
+reset_logbook.bat        back to the demo starting state
+```
+
+| Page | What it does |
+|---|---|
+| Experiments | list, long-term plot with all events, every uploaded file (new values, overlap skipped, duplicates) |
+| Upload | drop export files; known formats are recognised by their column header; a new format is set up once (separator, decimal mark, header line, time stamp, instrument status) with a live preview |
+| Plot & export | any parameters, any period or "around an event"; choose which event types to show; PNG, PDF (chart + event list), Excel (data, events, flagged values, chart) |
+| Events | add / edit / delete; one experiment or all experiments; drawn as vertical line, note, shaded period or hidden |
+| Saved plots | long-term plot and a plot per upload are saved automatically; your own saved plots (PNG + PDF) |
+
+Demo story (all data fictional, files in `data/logbook_usb/`):
+
+* **EXP-2026-03, RO pilot skid**: German data-logger CSVs (Windows-1252, `;`, decimal comma, separate date and time
+  columns, 6-line header block). One export overlaps the previous one, one was copied twice - both handled.
+  Flux decline between CIPs gets worse over time; conductivity sensor drift until its calibration on 20.06.
+* **EXP-2026-05, UV185 / TOC test**: analyser TXT exports (UTF-16, tab, status column OK/CAL/ERR, `----` = missing).
+  Calibration rows are flagged and hidden by default (tick "include flagged" to see the 250 ppb standard).
+* **Left for the live demo**: upload `PR2-LOG_2026-09-28.CSV` and `TOC_Export_20261019.txt` (recognised automatically),
+  `Handmessgeraet_Stichproben_PR2.csv` (new format: set it up, e.g. prefix "Grab sample: "), and add the missing
+  event **CIP 4 on 02.09.2026 09:00-13:30** (visible as the flow jump).
+
+Hosting: a second Connect Cloud content item from the same repository with primary file `logbook_app.py`
+(builds the demo on first start, ~30 s). On the hosted copy, uploads and events are lost when the server restarts.
